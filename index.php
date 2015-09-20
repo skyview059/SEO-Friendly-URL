@@ -1,11 +1,12 @@
 <?php
 
 $rules = array( 
+                'github'    => "/(?'user_id'[\w\-]+)([^/]+)/(?'project_url'[\w\-]+)([^/]+)/tree/master",
                 'category'  => "/category/(?'cat_name'[\w\-]+)([^/]+)",			// 3 '/category/category-slug'
-                'details'  => "/details/(?'details'[^/]+)",					// 2 '/detals/album-slug'		
-                'search'  => "/search/(?'key'[^/]+)([^/]+)",					// 2 '/detals/album-slug'
-                'page'  => "/(?'page'[\w\-]+)([^/]+)", 						// 1 'page.html'	
-                'home'  => "/"   
+                'details'   => "/details/(?'details'[^/]+)",					      // 2 '/detals/album-slug'		
+                'search'    => "/search/(?'key'[^/]+)([^/]+)",				    	// 2 '/detals/album-slug'
+                'page'      => "/(?'page'[\w\-]+)([^/]+)", 						      // 1 'page.html'	
+                'home'      => "/"   
         );
 
 $uri = rtrim( dirname($_SERVER["SCRIPT_NAME"]), '/' );
